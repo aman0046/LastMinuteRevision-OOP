@@ -26,7 +26,7 @@ In Other Words, it is an approach to problem-solving where all computations are 
 
 **Object**: An Object is an instance of a Class. When a class is defined, no memory is allocated but when it is instantiated (i.e. an object is created) memory is allocated.
 
-```
+```c++
 #include <bits/stdc++.h>
 using namespace std;
 class Person{
@@ -89,7 +89,7 @@ There are 3 types of constructors:
 - Constructors can be overloaded.
 - Constructor cannot be declared virtual.
 
-```
+```C++
 #include <bits/stdc++.h>
 using namespace std;
 
