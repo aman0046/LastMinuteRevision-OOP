@@ -211,16 +211,16 @@ using namespace std;
 
 class A{
     public:
-    void funcA(){
-     cout<<"Inherited from class A"<<endl;
-    }
+      void funcA(){
+        cout<<"Inherited from class A"<<endl;
+      }
 };
 
 class B : public A{
- public:
- void funcB(){
-    cout<<"Inherited from class B"<<endl;
- }
+    public:
+      void funcB(){
+        cout<<"Inherited from class B"<<endl;
+      }
 };
 
 int main(){
@@ -237,25 +237,25 @@ int main(){
 using namespace std;
 
 class A{
- public:
- void func(){
-    cout<<"Inherited from class A"<<endl;
- }
+    public:
+      void func(){
+        cout<<"Inherited from class A"<<endl;
+      }
 };
 
 class B{
- public:
- void func(){
-    cout<<"Inherited from class B"<<endl;
- }
+    public:
+      void func(){
+        cout<<"Inherited from class B"<<endl;
+      }
 };
 
 class C : public A, public B{
 
     public:
-    void func(){
+      void func(){
         cout<<"Inherited from class C"<<endl;
-    }
+      }
 };
 
 int main()
@@ -275,24 +275,24 @@ int main()
 using namespace std;
 
 class A{
-  public:
-  void funcA(){
-    cout<<"Inhrited from class A"<<endl;
-  }
+     public:
+       void funcA(){
+         cout<<"Inhrited from class A"<<endl;
+       }
 };
 
 class B : public A{
-    public:
-    void funcB() {
-        cout<<"Inherted from class B"<<endl;
-    }
+     public:
+       void funcB() {
+         cout<<"Inherted from class B"<<endl;
+       }
 };
 
 class C : public B{
-    public:
-    void func() {
-        cout<<"Inherited from class C"<<endl;
-    }
+     public:
+       void func() {
+         cout<<"Inherited from class C"<<endl;
+       }
 };
 
 int main()
@@ -311,23 +311,23 @@ using namespace std;
 
 class A{
     public:
-    void func(){
+      void func(){
         cout<<"Inherited from class A"<<endl;
-    }
+      }
 };
 
 class B : public A{
     public:
-    void funcB(){
+      void funcB(){
         cout<<"Inherited from class B"<<endl;
-    }
+      }
 };
 
 class C : public A{
     public:
-    void funcC(){
+      void funcC(){
         cout<<"Inherited from class C"<<endl;
-    }
+      }
 };
 
 int main()
@@ -371,23 +371,23 @@ using namespace std;
 class Encapsulation
 {
 	private:
-		// data hidden from outside world
-		int x;
+	  // data hidden from outside world
+	  int x;
 		
 	public:
-		// function to set value of
-		// variable x
-		void set(int a)
-		{
-			x =a;
-		}
+	  // function to set value of
+	  // variable x
+	  void set(int a)
+	  {
+		x =a;
+	  }
 		
-		// function to return value of
-		// variable x
-		int get()
-		{
-			return x;
-		}
+	  // function to return value of
+	  // variable x
+	  int get()
+	  {
+		return x;
+	  }
 };
 int main()
 {
@@ -421,22 +421,22 @@ using namespace std;
 
 class implementAbstraction {
 private:
-	int a, b;
+   int a, b;
 
 public:
-	// method to set values of
-	// private members
-	void set(int x, int y)
-	{
-		a = x;
-		b = y;
-	}
+   // method to set values of
+   // private members
+   void set(int x, int y)
+   {
+	a = x;
+	b = y;
+   }
 
-	void display()
-	{
-		cout << "a = " << a << endl;
-		cout << "b = " << b << endl;
-	}
+   void display()
+   {
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+   }
 };
 
 int main()
@@ -485,19 +485,19 @@ using namespace std;
 class Simple
 {
   public :
-  void fun()
-  {
-      cout<<"function with no argument"<<endl;
-  }
+    void fun()
+    {
+        cout<<"function with no argument"<<endl;
+    }
 
-  void fun(int x)
-  {
-      cout <<"function with int argument"<<endl;
-  }
-  void fun(double x)
-  {
-      cout<<"function with double argument"<<endl;
-  }
+    void fun(int x)
+    {
+        cout <<"function with int argument"<<endl;
+    }
+    void fun(double x)
+    {
+        cout<<"function with double argument"<<endl;
+    }
 };
 
 int main()
@@ -518,19 +518,19 @@ using namespace std;
 
 class Complex {
 private:
-	int real, imag;
+   int real, imag;
 public:
-	Complex(int r = 0, int i = 0) {real = r; imag = i;}
+   Complex(int r = 0, int i = 0) {real = r; imag = i;}
 	
-	// This is automatically called when '+' is used with
-	// between two Complex objects
-	Complex operator + (Complex const &obj) {
-		Complex res;
-		res.real = real + obj.real;
-		res.imag = imag + obj.imag;
-		return res;
-	}
-	void print() { cout << real << " + i" << imag << '\n'; }
+   // This is automatically called when '+' is used with
+   // between two Complex objects
+   Complex operator + (Complex const &obj) {
+	   Complex res;
+	   res.real = real + obj.real;
+	   res.imag = imag + obj.imag;
+	   return res;
+   }
+   void print() { cout << real << " + i" << imag << '\n'; }
 };
 
 int main()
@@ -598,20 +598,20 @@ int main() {
 using namespace std;
 
 class A{
-	int x;
-		public:
+   int x;
+   public:
 			
-	A(){
-		x=10;
-	}
-	friend class B; //friend class
+    A(){
+       x=10;
+    }
+    friend class B; //friend class
 };
 
 class B{
-	public:
-		void display(A &t){
-			cout<<endl<<"The value of x="<<t.x;
-		}
+    public:
+      void display(A &t){
+	 cout<<endl<<"The value of x="<<t.x;
+      }
 };
 
 int main(){
