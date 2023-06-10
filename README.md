@@ -7,7 +7,6 @@ Here we have last minute revision notes of object oriented programming language.
 
 
 
-
 ## Most Asked OOPS Interview Questions
 
 #### 1: What is OBJECT-ORIENTED PROGRAMMING?
