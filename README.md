@@ -58,7 +58,7 @@ int main() {
 
 ---
 
-### 2: Constructor
+### 3: Constructor
 
 **Answer**: 
 
@@ -143,8 +143,10 @@ int main()
 
 ```
 
+---
 
-### 3: Destructor
+
+### 4: Destructor
 
 **Answer**: 
 
@@ -180,12 +182,16 @@ public:
 
 ```
 
+---
 
-### 4: The main features of OOPs?
+
+### 5: The main features of OOPs?
 
 **Answer**: The main four pillar of oops are given below.
 
-### 5: Inheritance
+---
+
+### 6: Inheritance
 
 **Answer**: Inheritance is one of the most important features of Object-Oriented Programming. The capability of a class to derive properties and characteristics from another class is called Inheritance.
 
@@ -341,8 +347,10 @@ int main()
 
 ```
 
+---
 
-### 6: Encapsulation
+
+### 7: Encapsulation
 
 **Answer**: 
 
@@ -392,7 +400,9 @@ int main()
 }
 ```
 
-### 6: Abstraction
+---
+
+### 8: Abstraction
 
 **Answer**: 
 
@@ -438,3 +448,185 @@ int main()
 }
 ```
 
+---
+
+### 9: Polymorphism
+
+**Answer**: 
+
+- The word polymorphism means having many forms. Polymorphism occurs when there is a hierarchical mode inheritance.
+- C++ polymorphism means that a call to a member function will cause a different function to be executed depending on the type of object that invokes the function.
+
+
+**Advantages**
+
+Polymorphism in C++ allows us to reuse code by creating one function that’s usable for multiple uses. We can also make operators polymorphic and use them to add not only numbers but also combine strings. This saves time and allows for a more streamlined program.
+
+
+There are 2 types of Polymorphism:
+
+    1. Compile time Polymorphism
+    2. Run time Polymorphism
+   
+1. **Compile time Polymorphism**: Compile-time polymorphism is a polymorphism that is, the function call is resolved during the compilation process.
+
+We can achieve Compile-time polymorphism by two ways:
+
+1. **Function overloading**
+
+- When there are multiple functions with the same name but take different parameters as an arguments then these function are said to be overloaded.
+- Functions can be overloaded by changing the number of arguments or and changing the type of arguments.
+
+
+```C++
+#include<bits/stdc++.h>
+using namespace std;
+
+class Simple
+{
+  public :
+  void fun()
+  {
+      cout<<"function with no argument"<<endl;
+  }
+
+  void fun(int x)
+  {
+      cout <<"function with int argument"<<endl;
+  }
+  void fun(double x)
+  {
+      cout<<"function with double argument"<<endl;
+  }
+};
+
+int main()
+{
+    Simple obj;
+    obj.fun();
+    obj.fun(4);
+    obj.fun(4.5);
+    return 0;
+}
+```
+
+2. **Operator Overloading**: C++ also provides the option to overload operators So a single operator ‘+’, when placed between integer operands, adds them and when placed between string operands, concatenates them.
+
+```C++
+#include<iostream>
+using namespace std;
+
+class Complex {
+private:
+	int real, imag;
+public:
+	Complex(int r = 0, int i = 0) {real = r; imag = i;}
+	
+	// This is automatically called when '+' is used with
+	// between two Complex objects
+	Complex operator + (Complex const &obj) {
+		Complex res;
+		res.real = real + obj.real;
+		res.imag = imag + obj.imag;
+		return res;
+	}
+	void print() { cout << real << " + i" << imag << '\n'; }
+};
+
+int main()
+{
+	Complex c1(10, 5), c2(2, 4);
+	Complex c3 = c1 + c2;
+	c3.print();
+}
+```
+
+
+2. Runtime Polymorphism
+
+- Runtime polymorphism is also known as dynamic polymorphism or late binding. In runtime polymorphism, the function call is resolved at run time.
+- This type of polymorphism is achieved by Function Overriding or Virtual function.
+- A virtual function is a member function in the base class that we expect to redefine in derived classes.
+
+
+```C++
+#include <iostream>
+using namespace std;
+
+class Base {
+   public:
+    virtual void print() {
+        cout << "Base Function" << endl;
+    }
+};
+
+class Derived : public Base {
+   public:
+    void print() {
+        cout << "Derived Function" << endl;
+    }
+};
+
+int main() {
+    Derived derived1;
+
+    // pointer of Base type that points to derived1
+    Base* base1 = &derived1;
+
+    // calls member function of Derived class
+    base1->print();
+
+    return 0;
+}
+```
+
+---
+
+
+### 10: Friend Class & Friend Function
+
+#### Friend Class
+
+**Answer**
+
+- A friend class can access private and protected members of other class in which it is declared as friend.
+- It is sometimes useful to allow a particular class to access private members of other class.
+
+
+```C++
+#include<iostream>
+using namespace std;
+
+class A{
+	int x;
+		public:
+			
+	A(){
+		x=10;
+	}
+	friend class B; //friend class
+};
+
+class B{
+	public:
+		void display(A &t){
+			cout<<endl<<"The value of x="<<t.x;
+		}
+};
+
+int main(){
+	A _a;
+	B _b;
+	_b.display(_a);
+	return 0;
+}
+```
+
+---
+
+### 11: Access Modifiers
+
+- **Private** – The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+- **Default** – The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+- **Protected** – The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
+- **Public** – The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
