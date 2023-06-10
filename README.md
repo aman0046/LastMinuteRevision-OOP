@@ -9,7 +9,7 @@ Here we have last minute revision notes of object oriented programming language.
 
 ## Most Asked OOPS Interview Questions
 
-#### 1: What is OBJECT-ORIENTED PROGRAMMING?
+### 1: What is OBJECT-ORIENTED PROGRAMMING?
 
 **Answer**: Object-oriented programming is a programming paradigm built on the concept of objects.
 
@@ -17,7 +17,7 @@ In Other Words, it is an approach to problem-solving where all computations are 
 
 ---
 
-#### 2: Class and Object
+### 2: Class and Object
 
 **Answer**: 
 
@@ -58,7 +58,7 @@ int main() {
 
 ---
 
-#### 2: Constructor
+### 2: Constructor
 
 **Answer**: 
 
@@ -78,7 +78,7 @@ There are 3 types of constructors:
 
 3. **Copy Constructor**: A copy constructor is a member function which initializes an object using another object of the same class.
 
-**Characteristics of the constructor**:
+#### Characteristics of the constructor:
 
 - Constructor has the same name as the class itself.
 - Constructors don’t have a return type.
@@ -144,4 +144,297 @@ int main()
 ```
 
 
+### 3: Destructor
+
+**Answer**: 
+
+- A destructor is also a special member function as a constructor. Destructor destroys the class objects created by the constructor. 
+
+- Destructor has the same name as their class name preceded by a tiled (~) symbol.
+
+#### Characteristics of the constructor:
+
+- Destructor is invoked automatically by the compiler when its corresponding constructor goes out of scope and releases the memory space that is no longer required by the program.
+- Destructor neither requires any argument nor returns any value therefore it cannot be overloaded.
+- Destructor cannot be declared as static and const.
+- Destructor should be declared in the public section of the program.
+
+```C++
+#include <iostream>
+using namespace std;
+
+int count = 0 ;
+
+class num{
+public:
+    num(){ // Constructor
+        count++;
+        cout << "This is the time when constructor is called for object number" << count << endl;
+    }
+
+    ~num(){ // Destructor
+        cout << "This is the time when my destructor is called for object number" << count << endl;
+        count--;
+    }
+};
+
+```
+
+
+### 4: The main features of OOPs?
+
+**Answer**: The main four pillar of oops are given below.
+
+### 5: Inheritance
+
+**Answer**: Inheritance is one of the most important features of Object-Oriented Programming. The capability of a class to derive properties and characteristics from another class is called Inheritance.
+
+There are 5 types of Inheritance:
+
+    1. Single Inheritance
+    2. Multiple Inheritance
+    3. Multilevel Inheritance
+    4. Hierarchical Inheritance.
+    5. Hybrid Inheritance.
+
+1. **Single Inheritance**: When a subclass(child) is inherited from a base class is called single inheritance.
+
+```C++
+#include<bits/stdc++.h>
+using namespace std;
+
+class A{
+    public:
+    void funcA(){
+     cout<<"Inherited from class A"<<endl;
+    }
+};
+
+class B : public A{
+ public:
+ void funcB(){
+    cout<<"Inherited from class B"<<endl;
+ }
+};
+
+int main(){
+    B obj;
+    obj.funcA();
+    return 0;
+}
+```
+
+2. **Multiple Inheritance**: when one subclass is inherited from more than one base class is called multiple inheritance.
+
+```C++
+#include<bits/stdc++.h>
+using namespace std;
+
+class A{
+ public:
+ void func(){
+    cout<<"Inherited from class A"<<endl;
+ }
+};
+
+class B{
+ public:
+ void func(){
+    cout<<"Inherited from class B"<<endl;
+ }
+};
+
+class C : public A, public B{
+
+    public:
+    void func(){
+        cout<<"Inherited from class C"<<endl;
+    }
+};
+
+int main()
+{
+    C obj;
+    obj.A :: func();  // resolving ambiguity
+    obj.B :: func();
+    obj.func();
+    return 0;
+}
+```
+
+3. **Multilevel Inheritance**: In this type of inheritance, a derived class is created from another derived class.
+
+```C++
+#include<bits/stdc++.h>
+using namespace std;
+
+class A{
+  public:
+  void funcA(){
+    cout<<"Inhrited from class A"<<endl;
+  }
+};
+
+class B : public A{
+    public:
+    void funcB() {
+        cout<<"Inherted from class B"<<endl;
+    }
+};
+
+class C : public B{
+    public:
+    void func() {
+        cout<<"Inherited from class C"<<endl;
+    }
+};
+
+int main()
+{
+    C obj;
+    obj.funcB();
+    return 0;
+}
+```
+
+4. **Hierarchical Inheritance**: In this type of inheritance, more than one subclass is inherited from a single base class.
+
+```C++
+#include<bits/stdc++.h>
+using namespace std;
+
+class A{
+    public:
+    void func(){
+        cout<<"Inherited from class A"<<endl;
+    }
+};
+
+class B : public A{
+    public:
+    void funcB(){
+        cout<<"Inherited from class B"<<endl;
+    }
+};
+
+class C : public A{
+    public:
+    void funcC(){
+        cout<<"Inherited from class C"<<endl;
+    }
+};
+
+int main()
+{
+    C obj;
+    obj.func();
+    B obj2;
+    obj2.funcB();
+    obj2.func();
+    return 0;
+}
+```
+
+5. **Hybrid Inheritance**: Hybrid inheritance is a combination of multiple inheritance and multilevel inheritance.
+
+```C++
+
+```
+
+
+### 6: Encapsulation
+
+**Answer**: 
+
+- In normal term encapsulation is defined as wrapping up of data and information under a single unit.
+- Encapsulation define as binding together the data and function that manipulates them.
+
+**Advantages**
+
+- Increased security of data.
+- Encapsulation allows access to a level without revealing the complex details below that level.
+- It reduces human errors.
+- Makes the application easier to understand.
+
+```C++
+#include<iostream>
+using namespace std;
+
+class Encapsulation
+{
+	private:
+		// data hidden from outside world
+		int x;
+		
+	public:
+		// function to set value of
+		// variable x
+		void set(int a)
+		{
+			x =a;
+		}
+		
+		// function to return value of
+		// variable x
+		int get()
+		{
+			return x;
+		}
+};
+int main()
+{
+	Encapsulation obj;
+	
+	obj.set(5);
+	
+	cout<<obj.get();
+	return 0;
+}
+```
+
+### 6: Abstraction
+
+**Answer**: 
+
+- Data Abstraction is one of the most essential and important feature of Object Oriented Programming in c++.
+- Abstraction means displays only the relevant attributes of objects and hides the unnecessary details like the background details and implementation.
+
+**Advantages**
+
+- Helps user to avoid writing the low level code.
+- Avoids code duplication and increases reusability.
+- Helps to increase security of an application or program as only required details are provided to the user.
+
+```C++
+#include <iostream>
+using namespace std;
+
+class implementAbstraction {
+private:
+	int a, b;
+
+public:
+	// method to set values of
+	// private members
+	void set(int x, int y)
+	{
+		a = x;
+		b = y;
+	}
+
+	void display()
+	{
+		cout << "a = " << a << endl;
+		cout << "b = " << b << endl;
+	}
+};
+
+int main()
+{
+	implementAbstraction obj;
+	obj.set(10, 20);
+	obj.display();
+	return 0;
+}
+```
 
