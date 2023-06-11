@@ -53,6 +53,9 @@ int main() {
 
 ```
 
+**Output**
+> Person name is: Thanos
+
 ---
 
 ### 3: Constructor
@@ -101,7 +104,7 @@ class student
       cout<<"Default Constructor"<<endl;
     }
     
-    // parameterised constructor
+    // Parameterised Constructor
     student(string s, int a, int b)  
     {
        name = s;
@@ -110,7 +113,7 @@ class student
        cout <<"parameterised constructor"<<endl;
     }
 
-    // copy constructor
+    // Copy Constructor
     student (student &p){              
       name = p.name;
       age = p.age;
@@ -126,19 +129,42 @@ class student
         cout << age << endl;
         cout << "Gender = ";
         cout << gender << endl;
+        cout << "\n";
     }
 };
 
 int main()
-{
-    student w("sumeet", 20, 1);
-    student c;
-    c = w;
-    c.printinfo();
+{   
+    // Default Constructer Call
+    student s1;
+    s1.printinfo();
+    // Parameterised Constructer Call
+    student s2("sumeet", 20, 1);
+    s2.printinfo();
+    // Copy Constructor Call
+    student s3(s2);
+    s3.printinfo();
+
     return 0;
 }
 
 ```
+
+**Output**
+>Default Constructor\
+Name = \
+Age = 2 \
+Gender = 0 
+
+>parameterised constructor \
+Name = sumeet \
+Age = 20 \
+Gender = 1 
+
+>copy constructer \
+Name = sumeet \
+Age = 20 \
+Gender = 1 
 
 ---
 
@@ -213,14 +239,14 @@ using namespace std;
 class A{
     public:
       void funcA(){
-        cout<<"Inherited from class A"<<endl;
+        cout<<"Base Class"<<endl;
       }
 };
-
+// Class B is inherited from Class A
 class B : public A{
     public:
       void funcB(){
-        cout<<"Inherited from class B"<<endl;
+        cout<<"Inherited from class A"<<endl;
       }
 };
 
@@ -240,17 +266,17 @@ using namespace std;
 class A{
     public:
       void func(){
-        cout<<"Inherited from class A"<<endl;
+        cout<<"Base class A"<<endl;
       }
 };
 
 class B{
     public:
       void func(){
-        cout<<"Inherited from class B"<<endl;
+        cout<<"Base class B"<<endl;
       }
 };
-
+// Class C inherits both Class A and B
 class C : public A, public B{
 
     public:
@@ -278,21 +304,21 @@ using namespace std;
 class A{
      public:
        void funcA(){
-         cout<<"Inhrited from class A"<<endl;
+         cout<<"Base class A"<<endl;
        }
 };
-
+// Class B inherited from Class A
 class B : public A{
      public:
        void funcB() {
-         cout<<"Inherted from class B"<<endl;
+         cout<<"Inherted from class A"<<endl;
        }
 };
-
+// Class C inherited from Class B
 class C : public B{
      public:
        void func() {
-         cout<<"Inherited from class C"<<endl;
+         cout<<"Inherited from class B"<<endl;
        }
 };
 
@@ -313,21 +339,21 @@ using namespace std;
 class A{
     public:
       void func(){
-        cout<<"Inherited from class A"<<endl;
+        cout<<"Base class A"<<endl;
       }
 };
-
+// Class B inherited from Class A
 class B : public A{
     public:
       void funcB(){
-        cout<<"Inherited from class B"<<endl;
+        cout<<"Inherited from class A"<<endl;
       }
 };
-
+// Class C also inherited from Class A
 class C : public A{
     public:
       void funcC(){
-        cout<<"Inherited from class C"<<endl;
+        cout<<"Inherited also from class A"<<endl;
       }
 };
 
