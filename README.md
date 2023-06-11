@@ -215,12 +215,16 @@ public:
 ![pillar of OPPS](/assets/images/pillar_of_OOPS.png)
 
 
-
 ---
 
 ### 6: Inheritance
 
 **Answer**: Inheritance is one of the most important features of Object-Oriented Programming. The capability of a class to derive properties and characteristics from another class is called Inheritance.
+
+
+**Real Life Example**
+
+<img src="/assets/images/inheritance.png" width="400" height="400">
 
 There are 5 types of Inheritance:
 
@@ -393,7 +397,7 @@ int main()
 
 **Real Life Example**
 
-![Encapsulation](/assets/images/encapsulation.png)
+<img src="/assets/images/encapsulation.png" width="400" height="400">
 
 ```C++
 #include<iostream>
@@ -448,7 +452,7 @@ int main()
 
 **Real Life Example**
 
-![Abstraction](/assets/images/abstraction.png)
+<img src="/assets/images/abstraction.png" width="400" height="400">
 
 
 ```C++
@@ -500,7 +504,7 @@ Polymorphism in C++ allows us to reuse code by creating one function that’s us
 
 **Real Life Example**
 
-![Polymorphism](/assets/images/polymorphism.png)
+<img src="/assets/images/polymorphism.png" width="400" height="400">
 
 
 There are 2 types of Polymorphism:
