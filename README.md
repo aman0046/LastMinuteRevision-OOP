@@ -307,6 +307,12 @@ int main()
 }
 ```
 
+**Output**
+>Base class A \
+Base class B \
+Inherited from class A and B
+
+
 3. **Multilevel Inheritance**: In this type of inheritance, a derived class is created from another derived class.
 
 ```C++
@@ -337,10 +343,18 @@ class C : public B{
 int main()
 {
     C obj;
+    obj.funcA();
     obj.funcB();
+    obj.func();
     return 0;
 }
 ```
+**Output**
+> Base class A \
+Inherted from class A \
+Inherited from class B
+
+
 
 4. **Hierarchical Inheritance**: In this type of inheritance, more than one subclass is inherited from a single base class.
 
@@ -350,7 +364,7 @@ using namespace std;
 
 class A{
     public:
-      void func(){
+      void funcA(){
         cout<<"Base class A"<<endl;
       }
 };
@@ -372,13 +386,23 @@ class C : public A{
 int main()
 {
     C obj;
-    obj.func();
+    obj.funcA();
+    obj.funcC();
+    
     B obj2;
+    obj2.funcA();
     obj2.funcB();
-    obj2.func();
     return 0;
 }
 ```
+
+**Output**
+> Base class A \
+Inherited also from class A \
+Base class A \
+Inherited from class A
+
+
 
 5. **Hybrid Inheritance**: Hybrid inheritance is a combination of multiple inheritance and multilevel inheritance.
 
@@ -443,6 +467,9 @@ int main()
 }
 ```
 
+**Output**
+> 5
+
 ---
 
 ### 8: Abstraction
@@ -495,6 +522,10 @@ int main()
 	return 0;
 }
 ```
+
+**Output**
+> a = 10 \
+b = 20
 
 ---
 
@@ -562,6 +593,12 @@ int main()
 }
 ```
 
+**Output**
+> function with no argument \
+function with int argument \
+function with double argument
+
+
 2. **Operator Overloading**: C++ also provides the option to overload operators So a single operator ‘+’, when placed between integer operands, adds them and when placed between string operands, concatenates them.
 
 ```C++
@@ -592,6 +629,9 @@ int main()
 	c3.print();
 }
 ```
+
+**Output**
+> 12 + i9
 
 
 2. Runtime Polymorphism
@@ -718,6 +758,9 @@ int main(){
 	return 0;
 }
 ```
+
+**Output**
+>  The value of x=10
 
 ---
 
