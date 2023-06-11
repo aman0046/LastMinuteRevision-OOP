@@ -573,7 +573,11 @@ int main()
 
 - Runtime polymorphism is also known as dynamic polymorphism or late binding. In runtime polymorphism, the function call is resolved at run time.
 - This type of polymorphism is achieved by Function Overriding or Virtual function.
-- A virtual function is a member function in the base class that we expect to redefine in derived classes.
+
+**Virtual Function**
+- Virtual is a keyword in C++
+- A virtual function is a member function in the base class that we expect to redefine in derived classes
+- When a virtual function is defined in a base class, then in runtime on the basis of type of object assigned to it, the respective class function is called.
 
 
 ```C++
@@ -583,34 +587,75 @@ using namespace std;
 class Base {
    public:
     virtual void print() {
-        cout << "Base Function" << endl;
+        cout << "Base Class Function" << endl;
     }
 };
 
 class Derived : public Base {
    public:
     void print() {
-        cout << "Derived Function" << endl;
+        cout << "Derived Class Function" << endl;
     }
 };
 
 int main() {
-    Derived derived1;
-
-    // pointer of Base type that points to derived1
-    Base* base1 = &derived1;
-
-    // calls member function of Derived class
-    base1->print();
+    // Create the pointer of base class
+    Base* bptr;
+    // Create the object of base and derived class
+    Base base;
+    Derived derived;
+    
+    // In runtime, its depend on which class object
+    // we are assigning in base pointer.
+    
+    // Base Class print function will call,
+    // as we assign base class object
+    bptr = &base;
+    bptr->print();
+    
+    // Derived Class print function will call,
+    // as we assign derived class object
+    bptr = &derived;
+    bptr->print();
 
     return 0;
 }
 ```
 
+**Output**
+> Base Class Function \
+Derived Class Function
+
 ---
 
+### 10: Abstract Class
 
-### 10: Friend Class & Friend Function
+**Answer**
+
+- Sometimes implementation of all function cannot be provided in a base class because we don’t know the implementation. Such a class is called abstract class.
+Example, let Shape be a base class. We cannot provide implementation of function draw() in Shape, but we know every derived class must have implementation of draw().
+- Class is Abstract, if we have atleast one pure virtual function.
+
+---
+
+### 11: Pure Virtual Function
+
+**Answer**
+
+- Also called Absract function.
+- A pure virtual function in c++, is a virtual function for which we can have implementation, but we must override that function in the derived class, otherwise the derived class will also become abstract class.
+
+```
+class X
+{
+	public:
+	virtual void show() = 0; // pure virtual func
+};
+```
+
+---
+
+### 12: Friend Class & Friend Function
 
 #### Friend Class
 
@@ -651,7 +696,7 @@ int main(){
 
 ---
 
-### 11: Access Modifiers
+### 13: Access Modifiers
 
 - **Private** – The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
 - **Default** – The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
