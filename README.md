@@ -391,6 +391,10 @@ int main()
 - It reduces human errors.
 - Makes the application easier to understand.
 
+**Real Life Example**
+
+![Encapsulation](/assets/images/encapsulation.png)
+
 ```C++
 #include<iostream>
 using namespace std;
@@ -442,6 +446,11 @@ int main()
 - Avoids code duplication and increases reusability.
 - Helps to increase security of an application or program as only required details are provided to the user.
 
+**Real Life Example**
+
+![Abstraction](/assets/images/abstraction.png)
+
+
 ```C++
 #include <iostream>
 using namespace std;
@@ -488,6 +497,10 @@ int main()
 **Advantages**
 
 Polymorphism in C++ allows us to reuse code by creating one function that’s usable for multiple uses. We can also make operators polymorphic and use them to add not only numbers but also combine strings. This saves time and allows for a more streamlined program.
+
+**Real Life Example**
+
+![Polymorphism](/assets/images/polymorphism.png)
 
 
 There are 2 types of Polymorphism:
