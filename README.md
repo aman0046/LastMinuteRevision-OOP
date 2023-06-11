@@ -256,10 +256,18 @@ class B : public A{
 
 int main(){
     B obj;
+    // As Class B inherited properties of A.
+    // We can access funcA from class B object also.
     obj.funcA();
+    obj.funcB();
     return 0;
 }
 ```
+**Output**
+> Base Class \
+Inherited from class A
+
+
 
 2. **Multiple Inheritance**: when one subclass is inherited from more than one base class is called multiple inheritance.
 
