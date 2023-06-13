@@ -811,6 +811,61 @@ int main(){
 **Output**
 >  The value of x=10
 
+
+#### Friend Function
+
+**Answer**
+
+- Like a friend class, a friend function can be granted special access to private and protected members of a class in C++.
+- They are the non-member functions that can access and manipulate the private and protected members of the class for they are declared as friends.
+
+
+```C++
+#include <iostream>
+using namespace std;
+ 
+class Base {
+private:
+    int a;
+ 
+protected:
+    int b
+ 
+public:
+    Base()
+    {
+        a = 1;
+        b = 2;
+    }
+     
+     // friend function declaration
+    friend void func(base& obj);
+};
+ 
+ 
+// friend function definition
+void func(base& obj)
+{
+    cout << "Private Variable: " << obj.a << endl;
+    cout << "Protected Variable: " << obj.b;
+}
+ 
+// driver code
+int main()
+{
+    Base obj;
+    funcobj);
+ 
+    return 0;
+    
+ }
+```
+
+**Output**
+>  Private Variable: 1 \
+Protected Variable: 2
+
+
 ---
 
 ### 13: Access Modifiers
@@ -825,4 +880,9 @@ int main(){
 
 ### Thanks for Reading 
 
-**Mail your feedback or suggestions**
+<img src="/assets/images/save.png" width="600" height="200">
+
+**For any doubt, feel free to connect on Linkedin and Instagram**
+
+> [Linkedin](https://www.linkedin.com/in/amanchowdhury046/) \
+[Instagram](https://www.instagram.com/aman_chowdhury_046/)
