@@ -205,7 +205,7 @@ Gender = 1
 
 - Destructor has the same name as their class name preceded by a tiled (~) symbol.
 
-#### Characteristics of the constructor:
+#### Characteristics of the destructor:
 
 - Destructor is invoked automatically by the compiler when its corresponding constructor goes out of scope and releases the memory space that is no longer required by the program.
 - Destructor neither requires any argument nor returns any value therefore it cannot be overloaded.
