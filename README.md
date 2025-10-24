@@ -79,44 +79,45 @@ int main() {
 	return 0;
 }
 
-```
+Output
 
-**Output**
-> Person name is: Thanos
+Person name is: Thanos
 
----
+3: Constructor
+Answer:
 
-### 3: Constructor
+Constructors are special class members which are called by the compiler every time an object of that class is instantiated.
 
-**Answer**: 
-
-- Constructors are special class members which are called by the compiler every time an object of that class is instantiated.
-
-- Constructors have the same name as the class and may be defined inside or outside the class definition.
+Constructors have the same name as the class and may be defined inside or outside the class definition.
 
 There are 3 types of constructors:
 
-    1. Default constructors
-    2. Parameterized constructors
-    3. Copy constructors
+1. Default constructors
+2. Parameterized constructors
+3. Copy constructors
+Default Constructor: Default constructor is the constructor which doesn’t take any argument. It has no parameters.
 
-1. **Default Constructor**: Default constructor is the constructor which doesn’t take any argument. It has no parameters.
+Parameterized Constructor: A constructor is called Parameterized Constructor when it accepts a specific number of parameters.
 
-2. **Parameterized Constructor**: A constructor is called Parameterized Constructor when it accepts a specific number of parameters.
+Copy Constructor: A copy constructor is a member function which initializes an object using another object of the same class.
 
-3. **Copy Constructor**: A copy constructor is a member function which initializes an object using another object of the same class.
+Characteristics of the constructor:
+Constructor has the same name as the class itself.
 
-#### Characteristics of the constructor:
+Constructors don’t have a return type.
 
-- Constructor has the same name as the class itself.
-- Constructors don’t have a return type.
-- A constructor is automatically called when an object is created.
-- It must be placed in the public section of class.
-- If we do not specify a constructor, C++ compiler generates a default constructor for object (expects no parameters and has an empty body).
-- Constructors can be overloaded.
-- Constructor cannot be declared virtual.
+A constructor is automatically called when an object is created.
 
-```C++
+It must be placed in the public section of class.
+
+If we do not specify a constructor, C++ compiler generates a default constructor for object (expects no parameters and has an empty body).
+
+Constructors can be overloaded.
+
+Constructor cannot be declared virtual.
+
+C++
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -176,43 +177,50 @@ int main()
     return 0;
 }
 
-```
+Output
 
-**Output**
->Default Constructor\
-Name = \
-Age = 2 \
-Gender = 0 
+Default Constructor
 
->parameterised constructor \
-Name = sumeet \
-Age = 20 \
-Gender = 1 
+Name =
 
->copy constructer \
-Name = sumeet \
-Age = 20 \
-Gender = 1 
+Age = 2
 
----
+Gender = 0
 
+parameterised constructor
 
-### 4: Destructor
+Name = sumeet
 
-**Answer**: 
+Age = 20
 
-- A destructor is also a special member function as a constructor. Destructor destroys the class objects created by the constructor. 
+Gender = 1
 
-- Destructor has the same name as their class name preceded by a tiled (~) symbol.
+copy constructer
 
-#### Characteristics of the constructor:
+Name = sumeet
 
-- Destructor is invoked automatically by the compiler when its corresponding constructor goes out of scope and releases the memory space that is no longer required by the program.
-- Destructor neither requires any argument nor returns any value therefore it cannot be overloaded.
-- Destructor cannot be declared as static and const.
-- Destructor should be declared in the public section of the program.
+Age = 20
 
-```C++
+Gender = 1
+
+4: Destructor
+Answer:
+
+A destructor is also a special member function as a constructor. Destructor destroys the class objects created by the constructor.
+
+Destructor has the same name as their class name preceded by a tiled (~) symbol.
+
+Characteristics of the constructor:
+Destructor is invoked automatically by the compiler when its corresponding constructor goes out of scope and releases the memory space that is no longer required by the program.
+
+Destructor neither requires any argument nor returns any value therefore it cannot be overloaded.
+
+Destructor cannot be declared as static and const.
+
+Destructor should be declared in the public section of the program.
+
+C++
+
 #include <iostream>
 using namespace std;
 
@@ -231,40 +239,27 @@ public:
     }
 };
 
-```
+5: The main features of OOPs?
+Answer: The main four pillar of oops are given below.
 
----
+6: Inheritance
+Answer: Inheritance is one of the most important features of Object-Oriented Programming. The capability of a class to derive properties and characteristics from another class is called Inheritance.
 
-
-### 5: The main features of OOPs?
-
-**Answer**: The main four pillar of oops are given below.
-
-![pillar of OPPS](/assets/images/pillar_of_OOPS.png)
-
-
----
-
-### 6: Inheritance
-
-**Answer**: Inheritance is one of the most important features of Object-Oriented Programming. The capability of a class to derive properties and characteristics from another class is called Inheritance.
-
-
-**Real Life Example**
+Real Life Example
 
 <img src="/assets/images/inheritance.png" width="400" height="400">
 
 There are 5 types of Inheritance:
 
-    1. Single Inheritance
-    2. Multiple Inheritance
-    3. Multilevel Inheritance
-    4. Hierarchical Inheritance.
-    5. Hybrid Inheritance.
+1. Single Inheritance
+2. Multiple Inheritance
+3. Multilevel Inheritance
+4. Hierarchical Inheritance.
+5. Hybrid Inheritance.
+Single Inheritance: When a subclass(child) is inherited from a base class is called single inheritance.
 
-1. **Single Inheritance**: When a subclass(child) is inherited from a base class is called single inheritance.
+C++
 
-```C++
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -290,16 +285,16 @@ int main(){
     obj.funcB();
     return 0;
 }
-```
-**Output**
-> Base Class \
+Output
+
+Base Class
+
 Inherited from class A
 
+Multiple Inheritance: when one subclass is inherited from more than one base class is called multiple inheritance.
 
+C++
 
-2. **Multiple Inheritance**: when one subclass is inherited from more than one base class is called multiple inheritance.
-
-```C++
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -333,17 +328,18 @@ int main()
     obj.func();
     return 0;
 }
-```
+Output
 
-**Output**
->Base class A \
-Base class B \
+Base class A
+
+Base class B
+
 Inherited from class A and B
 
+Multilevel Inheritance: In this type of inheritance, a derived class is created from another derived class.
 
-3. **Multilevel Inheritance**: In this type of inheritance, a derived class is created from another derived class.
+C++
 
-```C++
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -376,17 +372,18 @@ int main()
     obj.func();
     return 0;
 }
-```
-**Output**
-> Base class A \
-Inherted from class A \
+Output
+
+Base class A
+
+Inherted from class A
+
 Inherited from class B
 
+Hierarchical Inheritance: In this type of inheritance, more than one subclass is inherited from a single base class.
 
+C++
 
-4. **Hierarchical Inheritance**: In this type of inheritance, more than one subclass is inherited from a single base class.
-
-```C++
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -422,19 +419,20 @@ int main()
     obj2.funcB();
     return 0;
 }
-```
+Output
 
-**Output**
-> Base class A \
-Inherited also from class A \
-Base class A \
+Base class A
+
+Inherited also from class A
+
+Base class A
+
 Inherited from class A
 
+Hybrid Inheritance: The inheritance in which the derivation of a class involves more than one form of any inheritance is called hybrid inheritance. Basically C++ hybrid inheritance is combination of two or more types of inheritance. It can also be called multi path inheritance.
 
+C++
 
-5. **Hybrid Inheritance**: The inheritance in which the derivation of a class involves more than one form of any inheritance is called hybrid inheritance. Basically C++ hybrid inheritance is combination of two or more types of inheritance. It can also be called multi path inheritance.
-
-```C++
 #include <iostream>
 using namespace std;
 
@@ -481,34 +479,33 @@ int main()
  	obj1.sum();
  	return 0;
 }               	
-```
+Output
 
-**Output**
-> Sum = 14
+Sum = 14
 
+7: Encapsulation
+Answer:
 
----
+In normal term encapsulation is defined as wrapping up of data and information under a single unit.
 
+Encapsulation define as binding together the data and function that manipulates them.
 
-### 7: Encapsulation
+Advantages
 
-**Answer**: 
+Increased security of data.
 
-- In normal term encapsulation is defined as wrapping up of data and information under a single unit.
-- Encapsulation define as binding together the data and function that manipulates them.
+Encapsulation allows access to a level without revealing the complex details below that level.
 
-**Advantages**
+It reduces human errors.
 
-- Increased security of data.
-- Encapsulation allows access to a level without revealing the complex details below that level.
-- It reduces human errors.
-- Makes the application easier to understand.
+Makes the application easier to understand.
 
-**Real Life Example**
+Real Life Example
 
 <img src="/assets/images/encapsulation.png" width="400" height="400">
 
-```C++
+C++
+
 #include<iostream>
 using namespace std;
 
@@ -542,32 +539,31 @@ int main()
 	cout<<obj.get();
 	return 0;
 }
-```
+Output
 
-**Output**
-> 5
+5
 
----
+8: Abstraction
+Answer:
 
-### 8: Abstraction
+Data Abstraction is one of the most essential and important feature of Object Oriented Programming in c++.
 
-**Answer**: 
+Abstraction means displays only the relevant attributes of objects and hides the unnecessary details like the background details and implementation.
 
-- Data Abstraction is one of the most essential and important feature of Object Oriented Programming in c++.
-- Abstraction means displays only the relevant attributes of objects and hides the unnecessary details like the background details and implementation.
+Advantages
 
-**Advantages**
+Helps user to avoid writing the low level code.
 
-- Helps user to avoid writing the low level code.
-- Avoids code duplication and increases reusability.
-- Helps to increase security of an application or program as only required details are provided to the user.
+Avoids code duplication and increases reusability.
 
-**Real Life Example**
+Helps to increase security of an application or program as only required details are provided to the user.
+
+Real Life Example
 
 <img src="/assets/images/abstraction.png" width="400" height="400">
 
+C++
 
-```C++
 #include <iostream>
 using namespace std;
 
@@ -598,47 +594,43 @@ int main()
 	obj.display();
 	return 0;
 }
-```
+Output
 
-**Output**
-> a = 10 \
+a = 10
+
 b = 20
 
----
+9: Polymorphism
+Answer:
 
-### 9: Polymorphism
+The word polymorphism means having many forms. Polymorphism occurs when there is a hierarchical mode inheritance.
 
-**Answer**: 
+C++ polymorphism means that a call to a member function will cause a different function to be executed depending on the type of object that invokes the function.
 
-- The word polymorphism means having many forms. Polymorphism occurs when there is a hierarchical mode inheritance.
-- C++ polymorphism means that a call to a member function will cause a different function to be executed depending on the type of object that invokes the function.
-
-
-**Advantages**
+Advantages
 
 Polymorphism in C++ allows us to reuse code by creating one function that’s usable for multiple uses. We can also make operators polymorphic and use them to add not only numbers but also combine strings. This saves time and allows for a more streamlined program.
 
-**Real Life Example**
+Real Life Example
 
 <img src="/assets/images/polymorphism.png" width="400" height="400">
 
-
 There are 2 types of Polymorphism:
 
-    1. Compile time Polymorphism
-    2. Run time Polymorphism
-   
-1. **Compile time Polymorphism**: Compile-time polymorphism is a polymorphism that is, the function call is resolved during the compilation process.
+1. Compile time Polymorphism
+2. Run time Polymorphism
+Compile time Polymorphism: Compile-time polymorphism is a polymorphism that is, the function call is resolved during the compilation process.
 
 We can achieve Compile-time polymorphism by two ways:
 
-1. **Function overloading**
+Function overloading
 
-- When there are multiple functions with the same name but take different parameters as an arguments then these function are said to be overloaded.
-- Functions can be overloaded by changing the number of arguments or and changing the type of arguments.
+When there are multiple functions with the same name but take different parameters as an arguments then these function are said to be overloaded.
 
+Functions can be overloaded by changing the number of arguments or and changing the type of arguments.
 
-```C++
+C++
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -668,17 +660,18 @@ int main()
     obj.fun(4.5);
     return 0;
 }
-```
+Output
 
-**Output**
-> function with no argument \
-function with int argument \
+function with no argument
+
+function with int argument
+
 function with double argument
 
+Operator Overloading: C++ also provides the option to overload operators So a single operator ‘+’, when placed between integer operands, adds them and when placed between string operands, concatenates them.
 
-2. **Operator Overloading**: C++ also provides the option to overload operators So a single operator ‘+’, when placed between integer operands, adds them and when placed between string operands, concatenates them.
+C++
 
-```C++
 #include<iostream>
 using namespace std;
 
@@ -705,24 +698,26 @@ int main()
 	Complex c3 = c1 + c2;
 	c3.print();
 }
-```
+Output
 
-**Output**
-> 12 + i9
+12 + i9
 
+Runtime Polymorphism
 
-2. Runtime Polymorphism
+Runtime polymorphism is also known as dynamic polymorphism or late binding. In runtime polymorphism, the function call is resolved at run time.
 
-- Runtime polymorphism is also known as dynamic polymorphism or late binding. In runtime polymorphism, the function call is resolved at run time.
-- This type of polymorphism is achieved by Function Overriding or Virtual function.
+This type of polymorphism is achieved by Function Overriding or Virtual function.
 
-**Virtual Function**
-- Virtual is a keyword in C++
-- A virtual function is a member function in the base class that we expect to redefine in derived classes
-- When a virtual function is defined in a base class, then in runtime on the basis of type of object assigned to it, the respective class function is called.
+Virtual Function
 
+Virtual is a keyword in C++
 
-```C++
+A virtual function is a member function in the base class that we expect to redefine in derived classes
+
+When a virtual function is defined in a base class, then in runtime on the basis of type of object assigned to it, the respective class function is called.
+
+C++
+
 #include <iostream>
 using namespace std;
 
@@ -762,52 +757,41 @@ int main() {
 
     return 0;
 }
-```
+Output
 
-**Output**
-> Base Class Function \
+Base Class Function
+
 Derived Class Function
 
----
+10: Abstract Class
+Answer
 
-### 10: Abstract Class
+Sometimes implementation of all function cannot be provided in a base class because we don’t know the implementation. Such a class is called abstract class. Example, let Shape be a base class. We cannot provide implementation of function draw() in Shape, but we know every derived class must have implementation of draw().
 
-**Answer**
+Class is Abstract, if we have atleast one pure virtual function.
 
-- Sometimes implementation of all function cannot be provided in a base class because we don’t know the implementation. Such a class is called abstract class.
-Example, let Shape be a base class. We cannot provide implementation of function draw() in Shape, but we know every derived class must have implementation of draw().
-- Class is Abstract, if we have atleast one pure virtual function.
+11: Pure Virtual Function
+Answer
 
----
+Also called Absract function.
 
-### 11: Pure Virtual Function
+A pure virtual function in c++, is a virtual function for which we can have implementation, but we must override that function in the derived class, otherwise the derived class will also become abstract class.
 
-**Answer**
-
-- Also called Absract function.
-- A pure virtual function in c++, is a virtual function for which we can have implementation, but we must override that function in the derived class, otherwise the derived class will also become abstract class.
-
-```
 class X
 {
 	public:
 	virtual void show() = 0; // pure virtual func
 };
-```
+12: Friend Class & Friend Function
+Friend Class
+Answer
 
----
+A friend class can access private and protected members of other class in which it is declared as friend.
 
-### 12: Friend Class & Friend Function
+It is sometimes useful to allow a particular class to access private members of other class.
 
-#### Friend Class
+C++
 
-**Answer**
-
-- A friend class can access private and protected members of other class in which it is declared as friend.
-- It is sometimes useful to allow a particular class to access private members of other class.
-
-
-```C++
 #include<iostream>
 using namespace std;
 
@@ -834,21 +818,19 @@ int main(){
 	_b.display(_a);
 	return 0;
 }
-```
+Output
 
-**Output**
->  The value of x=10
+The value of x=10
 
+Friend Function
+Answer
 
-#### Friend Function
+Like a friend class, a friend function can be granted special access to private and protected members of a class in C++.
 
-**Answer**
+They are the non-member functions that can access and manipulate the private and protected members of the class for they are declared as friends.
 
-- Like a friend class, a friend function can be granted special access to private and protected members of a class in C++.
-- They are the non-member functions that can access and manipulate the private and protected members of the class for they are declared as friends.
+C++
 
-
-```C++
 #include <iostream>
 using namespace std;
  
@@ -857,7 +839,7 @@ private:
     int a;
  
 protected:
-    int b
+    int b;
  
 public:
     Base()
@@ -867,12 +849,12 @@ public:
     }
      
      // friend function declaration
-    friend void func(base& obj);
+    friend void func(Base& obj);
 };
  
  
 // friend function definition
-void func(base& obj)
+void func(Base& obj)
 {
     cout << "Private Variable: " << obj.a << endl;
     cout << "Protected Variable: " << obj.b;
@@ -882,58 +864,118 @@ void func(base& obj)
 int main()
 {
     Base obj;
-    funcobj);
+    func(obj);
  
     return 0;
     
  }
-```
+Output
 
-**Output**
->  Private Variable: 1 \
+Private Variable: 1
+
 Protected Variable: 2
 
+13: Access Modifiers
+Private – The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
 
----
+Default – The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
 
-### 13: Access Modifiers
+Protected – The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
 
-- **Private** – The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
-- **Default** – The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
-- **Protected** – The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
-- **Public** – The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
+Public – The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
 
+14: Shallow Copy vs Deep Copy
+Answer
 
----
+Shallow Copy: A shallow copy of an object copies all of the member field values. If a member field is a pointer, only the pointer's address is copied, not the data it points to. Both the original and the copied object will point to the same memory address. This can lead to problems, like one object's modification affecting the other, or double-free errors when destructors are called. The default copy constructor performs a shallow copy.
 
-### Thanks for Reading 
+Deep Copy: A deep copy, on the other hand, creates a completely independent copy of the object. If a member field is a pointer, it allocates new memory for the copy and then copies the data from the original object's memory location to this new location. This ensures that the original and the copied objects are fully independent. To perform a deep copy, you must create your own custom copy constructor.
 
+C++
+
+#include <iostream>
+using namespace std;
+
+class Box {
+private:
+    int length;
+    int* data;
+
+public:
+    // Parameterized constructor
+    Box(int len, int val) {
+        length = len;
+        data = new int;
+        *data = val;
+        cout << "Constructor called. Length: " << length << ", Data: " << *data << endl;
+    }
+
+    // Custom Copy Constructor for Deep Copy
+    Box(const Box& source) {
+        length = source.length;
+        // Allocate new memory for the pointer
+        data = new int;
+        // Copy the actual data value
+        *data = *(source.data);
+        cout << "Deep Copy Constructor called. Copied Length: " << length << ", Copied Data: " << *data << endl;
+    }
+    
+    // Destructor to free memory
+    ~Box() {
+        cout << "Destructor called for Box with data: " << *data << endl;
+        delete data;
+        data = nullptr; // Good practice to avoid dangling pointers
+    }
+
+    // Function to change data
+    void setData(int val) {
+        *data = val;
+    }
+
+    // Function to display data
+    void display() {
+        cout << "Length: " << length << ", Data: " << *data << endl;
+    }
+};
+
+int main() {
+    // --- Demonstrating Deep Copy ---
+    cout << "--- DEEP COPY DEMO ---" << endl;
+    
+    // Create original object
+    Box box1(10, 100);
+    cout << "box1 initial state: ";
+    box1.display();
+
+    // Create a copy using the deep copy constructor
+    Box box2 = box1; 
+    cout << "box2 state after deep copy: ";
+    box2.display();
+
+    // Modify the data in box2
+    cout << "\nModifying data in box2 to 200..." << endl;
+    box2.setData(200);
+
+    // Display both objects to show they are independent
+    cout << "box1 state after box2 modification: ";
+    box1.display();
+    cout << "box2 state after modification: ";
+    box2.display();
+    cout << "\nNote: box1's data remains 100, showing they are independent." << endl;
+    cout << "--- End of Program ---" << endl;
+    
+    return 0;
+}
+Output
+
+--- DEEP COPY DEMO --- Constructor called. Length: 10, Data: 100 box1 initial state: Length: 10, Data: 100 Deep Copy Constructor called. Copied Length: 10, Copied Data: 100 box2 state after deep copy: Length: 10, Data: 100
+
+Modifying data in box2 to 200... box1 state after box2 modification: Length: 10, Data: 100 box2 state after modification: Length: 10, Data: 200
+
+Note: box1's data remains 100, showing they are independent. --- End of Program --- Destructor called for Box with data: 200 Destructor called for Box with data: 100
+
+Thanks for Reading
 <img src="/assets/images/save.png" width="600" height="200">
 
----
-
-###
-
-#### Join us for all the latest offcampus job updates, webinar, hackathons, resume review and a lot more :heart::heart:
-
-<div align="left">
-  <a href="https://www.linkedin.com/in/amanchowdhury046/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
-  </a>
-  <a href="https://www.youtube.com/@amanchowdhury046" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="youtube logo"  />
-  </a>
-  <a href="https://telegram.me/offcampus_phodenge" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Telegram&logo=telegram&label=&color=2CA5E0&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="telegram logo"  />
-  </a>
-  <a href="https://www.instagram.com/aman_chowdhury_046/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="instagram logo"  />
-  </a>
-  <a href="https://whatsapp.com/channel/0029Va9Q0lkDZ4LYNx6ukw2u" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Whatsapp&logo=Whatsapp&label=&color=25D366&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="whatsapp logo"  />
-  </a>
-</div>
-
-###
-
----
+Join us for all the latest offcampus job updates, webinar, hackathons, resume review and a lot more :heart::heart:
+<div align="left"> <a href="https://www.linkedin.com/in/amanchowdhury046/" target="_blank"> <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo" /> </a> <a href="https://www.youtube.com/@amanchowdhury046" target="_blank"> <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="youtube logo" /> </a> <a href="https://telegram.me/offcampus_phodenge" target="_blank"> <img src="https://img.shields.io/static/v1?message=Telegram&logo=telegram&label=&color=2CA5E0&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="telegram logo" /> </a> <a href="https://www.instagram.com/aman_chowdhury_046/" target="_blank"> <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="instagram logo" /> </a> <a href="https://whatsapp.com/channel/0029Va9Q0lkDZ4LYNx6ukw2u" target="_blank"> <img src="https://img.shields.io/static/v1?message=Whatsapp&logo=Whatsapp&label=&color=25D366&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="whatsapp logo" /> </a> </div>
